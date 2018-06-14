@@ -1,6 +1,6 @@
 # MacOS Development Setup
-*all items marked with an`*` are optional*
-*all items marked with a `^` are already in `.zshrc` file*
+* *all items marked with an`*` are optional*
+* *all items marked with a `^` are already in `.zshrc` file*
 
 ## Open Terminal or [iTerm](https://iterm2.com) and run the following commands.
 
