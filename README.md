@@ -86,7 +86,6 @@ brew install zsh-completions
 >> ```
 For more information on Oh My ZSH!, check out [ohmyz.sh](http://ohmyz.sh)
 
-
 ### Install `zsh` plugins
 Install `nvm` via Oh My ZSH! custom plugin
 ```shell
@@ -137,11 +136,10 @@ Adding your SSH key to the ssh-agent
 
 For more information, check out [Connecting to GitHub with SSH](https://help.github.com/articles/connecting-to-github-with-ssh/)
 
-
 ## Setting up Atom (A hackable text editor for the 21st Century)
 1. Download and install [Atom](https://atom.io)
 2. Open Atom
-3. Open Atom's preferences `cmd + ,`
+3. Open Atom's settings `cmd + ,`
 4. Go to the Install section
 5. Search for and install **sync-settings**
 6. Click the settings button for **sync-settings**
@@ -150,6 +148,15 @@ For more information, check out [Connecting to GitHub with SSH](https://help.git
     > 86842ced79bac5412514590e3b2456db
     > ```
     > Create a [Personal access token](https://github.com/settings/tokens) GitHub
-7. Open the command pallette with `cmd + shift + p` and type "Sync Settings: restore"
+7. Open the command palette with `cmd + shift + p` and type "Sync Settings: restore"
 
 ### Do not restart Atom until the download is complete.
+
+## After restating Atom, let's update some settings
+
+1. Open Atom's settings `cmd + ,`
+2. In **Core > Project Home** change **/Users/#{user-name}/Projects** to the location where your repos are located.
+3. Search for **linter-haml** in the Packages section
+4. Change #{user-name} in Executable Path to your user name
+5. Search for **linter-rubocop** in the Packages section
+6. Change #{user-name} in Command setting to your user name
