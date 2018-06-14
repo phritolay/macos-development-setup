@@ -1,5 +1,6 @@
 # MacOS Development Setup
-*All items that start with * are Optional*
+*all items marked with an`*` are optional*
+*all items marked with a `^` are already in `.zshrc` file*
 
 ## Open Terminal or [iTerm](https://iterm2.com) and run the following commands.
 
@@ -12,7 +13,7 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 > ```shell
 > brew analytics off
 > ```
->> or add to `.zshrc` (install Oh My ZSH! in the *switch to zsh* section first)
+>> ^or add to `.zshrc` (install Oh My ZSH! in the *switch to zsh* section first)
 >> ```shell
 >> export HOMEBREW_NO_ANALYTICS=1
 >>```
@@ -66,12 +67,12 @@ For more information on Homebrew, check out [brew.sh](https://brew.sh)
 sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 ```
 
-**Install zsh completions*
+*Install zsh completions*
 ```shell
 brew install zsh-completions
 ```
 
-> To activate these completions, add the following to your .zshrc:
+> ^To activate these completions, add the following to your `.zshrc`
 >> ```zshrc
 >> fpath=(/usr/local/share/zsh-completions $fpath)
 >> ```
@@ -91,7 +92,7 @@ Install `nvm` via Oh My ZSH! custom plugin
 ```shell
 git clone https://github.com/lukechilds/zsh-nvm ~/.oh-my-zsh/custom/plugins/zsh-nvm
 ```
-> Then load it as a plugin in `.zshrc`, add `plugins+=(zsh-nvm)` after oh-my-zsh plugins.
+> ^Then load it as a plugin in `.zshrc`, add `plugins+=(zsh-nvm)` after oh-my-zsh plugins.
 
 For more information on nvm, check out [nvm](https://github.com/creationix/nvm) and [zsh-nvm](https://github.com/lukechilds/zsh-nvm)
 
@@ -135,3 +136,20 @@ Adding your SSH key to the ssh-agent
 >> Go to [GitHub Settings](https://github.com/settings/keys) and click on the `New SSH key` button and paste your key into the "Key" field.
 
 For more information, check out [Connecting to GitHub with SSH](https://help.github.com/articles/connecting-to-github-with-ssh/)
+
+
+## Setting up Atom (A hackable text editor for the 21st Century)
+1. Download and install [Atom](https://atom.io)
+2. Open Atom
+3. Open Atom's preferences `cmd + ,`
+4. Go to the Install section
+5. Search for and install **sync-settings**
+6. Click the settings button for **sync-settings**
+    > Gist ID
+    > ```settings
+    > 86842ced79bac5412514590e3b2456db
+    > ```
+    > Create a [Personal access token](https://github.com/settings/tokens) GitHub
+7. Open the command pallette with `cmd + shift + p` and type "Sync Settings: restore"
+
+### Do not restart Atom until the download is complete.
