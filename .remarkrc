@@ -1,0 +1,25 @@
+{
+  "plugins": [
+    "lint",
+    "remark-preset-lint-markdown-style-guide",
+    "remark-preset-lint-recommended",
+    ["lint-checkbox-character-style", { "checked": "x", "unchecked": " " }],
+    "lint-checkbox-content-indent",
+    ["lint-first-heading-level", false],
+    ["lint-linebreak-style", false],
+    ["lint-link-title-style", "'"],
+    ["lint-list-item-indent", "space"],
+    ["lint-list-item-spacing", false],
+    ["lint-maximum-heading-length", 120],
+    ["lint-maximum-line-length", false],
+    "lint-no-duplicate-headings-in-section",
+    "lint-no-empty-url",
+    "lint-no-heading-indent",
+    "lint-no-heading-like-paragraph",
+    "lint-no-html",
+    "lint-no-missing-blank-lines",
+    "lint-no-paragraph-content-indent",
+    "lint-no-tabs",
+    ["lint-ordered-list-marker-value", "ordered"]
+  ]
+}
