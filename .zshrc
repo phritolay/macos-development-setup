@@ -81,3 +81,23 @@ export PATH="$PATH:`yarn global bin`"
 # rbenv
 # -----------------------------------------------------------
 eval "$(rbenv init -)"
+
+check_for_rbenv_ruby_version() {
+  if [ -f .ruby-version ]
+  then
+    ruby_version=$(<.ruby-version)
+    echo "Found '$PWD/.ruby-version' with version <$ruby_version>"
+
+    if rbenv versions | grep -q $ruby_version
+    then
+      echo "Now using ruby $ruby_version"
+    else
+      echo "Now installing ruby $ruby_version"
+      brew update && brew upgrade ruby-build; rbenv install `cat .ruby-version`
+      echo "Now using ruby $ruby_version"
+    fi
+  fi
+}
+
+chpwd_functions+=(check_for_rbenv_ruby_version)
+check_for_rbenv_ruby_version
