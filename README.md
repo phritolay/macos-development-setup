@@ -188,7 +188,7 @@ For more information, check out [Connecting to GitHub with SSH](https://help.git
 
 1. Download and install [Atom](https://atom.io)
 2. Open Atom
-3. Open Atom's settings `cmd + ,`
+3. Open Atom's settings `cmd+,`
 4. Go to the Install section
 5. Search for and install **sync-settings**
 6. Click the settings button for **sync-settings**
@@ -201,7 +201,7 @@ For more information, check out [Connecting to GitHub with SSH](https://help.git
    >
    > Create a [Personal access token](https://github.com/settings/tokens) GitHub
 
-7. Open the command palette with `cmd + shift + p` and type "Sync Settings: restore"
+7. Open the command palette with `cmd+shift+p` and type "Sync Settings: restore"
 
 ### Do not restart Atom until the download is complete
 
@@ -213,3 +213,63 @@ For more information, check out [Connecting to GitHub with SSH](https://help.git
 4. Change #{user-name} in Executable Path to your user name
 5. Search for **linter-rubocop** in the Packages section
 6. Change #{user-name} in Command setting to your user name
+
+## Atom commands
+
+| Category                     | Command                             |  Shortcut                                 |
+| ---------------------------: | ----------------------------------: | :---------------------------------------- |
+|                              |                                     |                                           |
+| *General*                    |                                     |                                           |
+|                              | *Toggle command palette*            | `cmd+shift+p`                             |
+|                              | *Comment line or selection*         | `cmd+forwardslash`                        |
+|                              | *Toggle bottom dock*                | `ctrl+b`                                  |
+| *Projects*                   |                                     |                                           |
+|                              | *List projects*                     | `alt+cmd+o`                               |
+| *Terminal*                   |                                     |                                           |
+|                              | *Toggle terminal*                   | `cmd+~`                                   |
+|                              | *New terminal window*               | `shift+cmd+t`                             |
+|                              | *Next terminal window*              | `shift+cmd+k`                             |
+|                              | *Previous terminal window*          | `shift+cmd+j`                             |
+|                              |                                     |                                           |
+| *Find*                       |                                     |                                           |
+|                              | *Find in file*                      | `cmd+f`                                   |
+|                              | *Find in project*                   | `cmd+shift-f`                             |
+|                              | *Find next*                         | `cmd+g`                                   |
+| *View / Window Manipulation* |                                     |                                           |
+|                              | *Toggle tree-view sidebar*          | `cmd+backslash`                           |
+|                              | *Toggle fullscreen*                 | `cmd+ctrl+f`                              |
+|                              | *Move file to left pane*            | `cmd+k left`                              |
+|                              | *Move file to right pane*           | `cmd+k right`                             |
+|                              |                                     |                                           |
+| *File Navigation*            |                                     |                                           |
+|                              | *Toggle file finder*                | `cmd+p`                                   |
+|                              | *Go to line*                        | `ctrl+g`                                  |
+|                              | *Go to symbol*                      | `cmd+r`                                   |
+|                              | *Move to beginning of file*         | `cmd+arrow up`                            |
+|                              | *Move to end of file*               | `cmd+arrow down`                          |
+|                              | *Next file*                         | `cmd+shift+}`                             |
+|                              | *Previous file*                     | `cmd+shift+{`                             |
+| *Git Integration*            |                                     |                                           |
+|                              | *Git status list*                   | `cmd+shift+b`                             |
+|                              | *Move to next diff*                 | `alt+g+arrow down`                        |
+|                              | *Move to previous diff*             | `alt+g+arrow up`                          |
+| *Folding*                    |                                     |                                           |
+|                              | *Fold current code block*           | `cmd+alt+[`                               |
+|                              | *Unfold current code block*         | `cmd+alt+]`                               |
+|                              | *Unfold all code blocks*            | `cmd+alt+shift+]`                         |
+| *Line Manipulation*          |                                     |                                           |
+|                              | *Indent current line*               | `cmd+]`                                   |
+|                              | *Outdent current line*              | `cmd+[`                                   |
+|                              | *Move to the end of line*           | `cmd+arrow left`                          |
+|                              | *Move to the beginning of line*     | `cmd+arrow right`                         |
+|                              |                                     |                                           |
+| *Selection*                  |                                     |                                           |
+|                              | *Select current word/token*         | `cmd_d`                                   |
+|                              | *Select current line*               | `cmd+l`                                   |
+|                              | *Select to first character of line* | `shift-alt+arrow left`                    |
+|                              | *Select to last character of line*  | `shift-alt+arrow right`                   |
+|                              | *Select 1 character at a time*      | `shift+arrow left` or `shift+arrow right` |
+|                              | *Convert to lowercase*              | `cmd+k cmd+l`                             |
+|                              |                                     |                                           |
+| *Sorting*                    |                                     |                                           |
+|                              | *Sort lines alphabetically*         | `alt+k`                                   |
