@@ -16,7 +16,6 @@
     "lint-no-empty-url",
     "lint-no-heading-indent",
     "lint-no-heading-like-paragraph",
-    "lint-no-html",
     "lint-no-missing-blank-lines",
     "lint-no-paragraph-content-indent",
     "lint-no-tabs",

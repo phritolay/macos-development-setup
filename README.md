@@ -117,8 +117,6 @@ For more information on Oh My ZSH!, check out [ohmyz.sh](http://ohmyz.sh)
 
 ### Install `zsh` plugins
 
-### `zsh` plugins
-
 Install `nvm` via Oh My ZSH! custom plugin
 
 ```shell
@@ -186,24 +184,47 @@ For more information, check out [Connecting to GitHub with SSH](https://help.git
 
 ## Setting up Atom (A hackable text editor for the 21st Century)
 
-1. Download and install [Atom](https://atom.io)
-2. Open Atom
-3. Open Atom's settings `cmd+,`
-4. Go to the Install section
-5. Search for and install **sync-settings**
-6. Click the settings button for **sync-settings**
+1. Download and install Atom
 
-   > Gist ID
-   >
+   > <a href="https://atom.io"><img src="http://seeklogo.com/images/A/atom-logo-19BD90FF87-seeklogo.com.png" width="25px"></a>
+
+2. Open Atom and install Shell Commands
+
+   > <img src="/images/atom-shell-commands.png" width="888px">
+
+3. Open Atom's settings `cmd+,`
+
+   > <img src="/images/atom-preferences.png" width="888px">
+
+4. Go to the Install section, search for **sync-settings** and install
+
+   > <img src="/images/atom-sync-settings.png" width="888px">
+
+5. After **sync-settings** has been installed, click the settings
+
+   > <img src="/images/atom-sync-settings-settings.png" width="888px">
+
+6. Enter your Github Personal access token and the following Gist ID
+
    > ```settings
    > 86842ced79bac5412514590e3b2456db
    > ```
    >
-   > Create a [Personal access token](https://github.com/settings/tokens) GitHub
+   > <img src="/images/atom-sync-settings-gist-id.png" width="888px">
+   >
+   >> If you do not have a [Personal access token](https://github.com/settings/tokens) you can create one on GitHub.
+   >>
+   >> <img src="/images/github-generate-personal-access-token.png" width="888px">
+   >>
+   >> ---
+   >>
+   >> <img src="/images/github-generate-new-personal-access-token.png" width="888px">
 
-7. Open the command palette with `cmd+shift+p` and type "Sync Settings: restore"
+7. In Atom open the command palette with `cmd+shift+p` and type "Sync Settings: restore"
 
-### Do not restart Atom until the download is complete
+   > <img src="/images/atom-sync-settings-restore.png" width="888px">
+   >
+   > ### Do not restart Atom until the download is complete
 
 ## After restating Atom, let's update some settings
 
@@ -221,7 +242,7 @@ For more information, check out [Connecting to GitHub with SSH](https://help.git
 |                              |                                     |                                           |
 | *General*                    |                                     |                                           |
 |                              | *Toggle command palette*            | `cmd+shift+p`                             |
-|                              | *Comment line or selection*         | `cmd+forwardslash`                        |
+|                              | *Settings*                          | `ctrl+,`                                  |
 |                              | *Toggle bottom dock*                | `ctrl+b`                                  |
 | *Projects*                   |                                     |                                           |
 |                              | *List projects*                     | `alt+cmd+o`                               |
@@ -262,7 +283,7 @@ For more information, check out [Connecting to GitHub with SSH](https://help.git
 |                              | *Outdent current line*              | `cmd+[`                                   |
 |                              | *Move to the end of line*           | `cmd+arrow left`                          |
 |                              | *Move to the beginning of line*     | `cmd+arrow right`                         |
-|                              |                                     |                                           |
+|                              | *Comment line or selection*         | `cmd+forwardslash`                        |
 | *Selection*                  |                                     |                                           |
 |                              | *Select current word/token*         | `cmd_d`                                   |
 |                              | *Select current line*               | `cmd+l`                                   |

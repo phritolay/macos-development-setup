@@ -12,7 +12,6 @@
     "remark-lint-no-empty-url": "^1.0.3",
     "remark-lint-no-heading-indent": "^1.0.2",
     "remark-lint-no-heading-like-paragraph": "^1.0.2",
-    "remark-lint-no-html": "^1.0.2",
     "remark-lint-no-missing-blank-lines": "^1.0.2",
     "remark-lint-no-paragraph-content-indent": "^1.0.4",
     "remark-lint-no-tabs": "^1.0.2",
