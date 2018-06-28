@@ -1,7 +1,6 @@
 # MacOS Development Setup
 
 - *all items marked with an`*` are optional*
-- *all items marked with a `^` are already in `.zshrc` file*
 
 ## Open Terminal or [iTerm](https://iterm2.com) and run the following commands
 
@@ -14,18 +13,6 @@ xcode-select --install
 ```shell
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
-
-> *Opt Out of Homebrew analytics
->
-> ```shell
-> brew analytics off
-> ```
->
->> ^or add to `.zshrc` (install Oh My ZSH! in the *switch to zsh* section first)
->>
->> ```shell
->> export HOMEBREW_NO_ANALYTICS=1
->> ```
 
 ### Once the system is ready to brew, let's install some packages
 
@@ -78,8 +65,8 @@ brew install heroku/brew/heroku
 >> ```shell
 >> brew doctor
 >> ```
-
-For more information on Homebrew, check out [brew.sh](https://brew.sh)
+>>
+>> For more information on Homebrew, check out [brew.sh](https://brew.sh)
 
 ### Switch to `zsh`
 
@@ -95,37 +82,33 @@ sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/to
 brew install zsh-completions
 ```
 
-> ^To activate these completions, add the following to your `.zshrc`
->
->> ```zshrc
->> fpath=(/usr/local/share/zsh-completions $fpath)
->> ```
->>
->> You may also need to force rebuild `zcompdump`:
->>
->> ```shell
->> rm -f ~/.zcompdump; compinit
->> ```
->>
->> If you receive "zsh compinit: insecure directories" warnings when attempting to load these completions, you may need to run this:
->>
->> ```shell
->> chmod go-w '/usr/local/share'
->> ```
+> For more information on Oh My ZSH!, check out [ohmyz.sh](http://ohmyz.sh)
 
-For more information on Oh My ZSH!, check out [ohmyz.sh](http://ohmyz.sh)
+### Install plugins
 
-### Install `zsh` plugins
-
-Install `nvm` via Oh My ZSH! custom plugin
+*Install `nvm` via Oh My ZSH! custom plugin*
 
 ```shell
 git clone https://github.com/lukechilds/zsh-nvm ~/.oh-my-zsh/custom/plugins/zsh-nvm
 ```
 
-> ^Then load it as a plugin in `.zshrc`, add `plugins+=(zsh-nvm)` after oh-my-zsh plugins.
+> For more information on nvm, check out [nvm](https://github.com/creationix/nvm) and [zsh-nvm](https://github.com/lukechilds/zsh-nvm)
 
-For more information on nvm, check out [nvm](https://github.com/creationix/nvm) and [zsh-nvm](https://github.com/lukechilds/zsh-nvm)
+*Install `bundler-exec` plugin*
+
+> Automatically run Ruby scripts with "bundle exec" (but only when appropriate)
+
+```shell
+curl -L https://github.com/gma/bundler-exec/raw/master/bundler-exec.sh > ~/.bundler-exec.sh
+```
+
+> For more information on nvm, check out [nvm](https://github.com/creationix/nvm) and [zsh-nvm](https://github.com/lukechilds/zsh-nvm)
+
+### Replace default `.zshrc` file
+
+```shell
+rm -rf ~/.zshrc; curl -L https://raw.githubusercontent.com/phritolay/macos-development-setup/master/Users/user-name/.zshrc > ~/.zshrc
+```
 
 ### Generating SSH keys
 
@@ -155,13 +138,10 @@ Adding your SSH key to the ssh-agent
 > eval "$(ssh-agent -s)"
 > ```
 >
-> 2 - If you're using macOS Sierra 10.12.2 or later, you will need to add the following to your `~/.ssh/config` file to automatically load keys into the ssh-agent and store passphrases in your keychain.
+> 2 - If you're using macOS Sierra 10.12.2 or later, you will need to add a `~/.ssh/config` file to automatically load keys into the ssh-agent and store passphrases in your keychain.
 >
-> ```Ini
-> Host *
->  AddKeysToAgent yes
->  UseKeychain yes
->  IdentityFile ~/.ssh/id_rsa
+> ```shell
+> curl -L https://raw.githubusercontent.com/phritolay/macos-development-setup/master/Users/user-name/.ssh/config > ~/.ssh/config
 > ```
 >
 > 3 - Add your SSH private key to the ssh-agent and store your passphrase in the keychain.
@@ -228,12 +208,43 @@ For more information, check out [Connecting to GitHub with SSH](https://help.git
 
 ## After restating Atom, let's update some settings
 
-1. Open Atom's settings `cmd + ,`
-2. In **Core > Project Home** change **/Users/#{user-name}/Projects** to the location of your repos.
-3. Search for **linter-haml** in the Packages section
-4. Change #{user-name} in Executable Path to your user name
-5. Search for **linter-rubocop** in the Packages section
-6. Change #{user-name} in Command setting to your user name
+1. Open Atom's settings `cmd+,`
+
+   > <img src="/images/atom-preferences.png" width="888px">
+
+2. Go to **Core**, scroll down to **Project Home** and change **/Users/*{user-name}*/Projects** to the location of your repos.
+
+   > It's a good idea to keep all your projects in on place. *Not on the Desktop* ;-)
+   >
+   > <img src="/images/atom-preferences-core.png" width="888px">
+
+3. Go to **Packages**, search for **linter-haml** and click on settings
+
+   > <img src="/images/atom-preferences-linter-haml.png" width="888px">
+   >
+   > Change the Executable Path to your haml-lint shim path e.g. **/Users/*{user-name}*/.rbenv/shims/haml-lint**
+   >
+   >> Open terminal with `cmd+~` and run the following command to find your haml-lint shim
+   >>
+   >> ```shell
+   >> which haml-lint
+   >> ```
+   >>
+   >> <img src="/images/atom-preferences-linter-haml-path.png" width="888px">
+
+4. Go to **Packages**, search for **linter-rubocop** and click on settings
+
+   > <img src="/images/atom-preferences-rubocop.png" width="888px">
+   >
+   > Change the Command setting to your rubocop shim path e.g. **/Users/*{user-name}*/.rbenv/shims/rubocop**
+   >
+   >> Open terminal with `cmd+~` and run the following command to find your rubocop shim
+   >>
+   >> ```shell
+   >> which rubocop
+   >> ```
+   >>
+   >> <img src="/images/atom-preferences-rubocop-path.png" width="888px">
 
 ## Atom commands
 

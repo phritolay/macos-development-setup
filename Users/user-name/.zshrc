@@ -76,7 +76,7 @@ export PATH="$PATH:`yarn global bin`"
 # bundler-exec takes care of automatically pre-pending "bundle exec" to the beginning of common Ruby commands.
 # https://github.com/gma/bundler-exec
 # -----------------------------------------------------------
-# [ -f ~/.bundler-exec.sh ] && source ~/.bundler-exec.sh
+[ -f ~/.bundler-exec.sh ] && source ~/.bundler-exec.sh
 
 # rbenv
 # -----------------------------------------------------------
