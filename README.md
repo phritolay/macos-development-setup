@@ -283,8 +283,12 @@ For more information, check out [Connecting to GitHub with SSH](https://help.git
 |                              | *Previous file*                     | `cmd+shift+{`                             |
 | *Git Integration*            |                                     |                                           |
 |                              | *Git status list*                   | `cmd+shift+b`                             |
+|                              | *Toggle GitHub sidebar*             | `ctrl+g`                                  |
+|                              | *Git Plus menu*                     | `cmd+shift+h`                             |
 |                              | *Move to next diff*                 | `alt+g+arrow down`                        |
 |                              | *Move to previous diff*             | `alt+g+arrow up`                          |
+|                              | *Open on GitHub: History*           | `alt+g+h`                                 |
+|                              |                                     |                                           |
 | *Folding*                    |                                     |                                           |
 |                              | *Fold current code block*           | `cmd+alt+[`                               |
 |                              | *Unfold current code block*         | `cmd+alt+]`                               |
